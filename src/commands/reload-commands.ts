@@ -11,7 +11,7 @@ export const reloadCommands: Command = {
     .setDescription(settings.description)
     .setDMPermission(settings.isDmCommand)
     .setDefaultMemberPermissions(settings.defaultMemberPermission),
-  run: async function (interaction: CommandInteraction<CacheType>): Promise<void> {
+  run: async (interaction: CommandInteraction<CacheType>): Promise<void> => {
     if (!interaction.isChatInputCommand()) return;
     try {
       await interaction.deferReply();

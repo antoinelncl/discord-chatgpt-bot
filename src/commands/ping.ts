@@ -5,7 +5,7 @@ import { Command } from '~/types/command';
 
 export const ping: Command = {
   data: new SlashCommandBuilder().setName('ping').setDescription('get eustache current ping').setDMPermission(true),
-  run: async function (interaction): Promise<void> {
+  run: async (interaction): Promise<void> => {
     if (!interaction.isChatInputCommand()) return;
     try {
       const sent = await interaction.reply({ content: 'Pinging...', fetchReply: true });

@@ -8,7 +8,7 @@ export const hello: Command = {
     .setName(settings.name)
     .setDescription(settings.description)
     .setDMPermission(settings.isDmCommand),
-  run: async function (interaction): Promise<void> {
+  run: async (interaction): Promise<void> => {
     if (!interaction.isChatInputCommand()) return;
     try {
       await interaction.reply(`Hello! ${interaction.member?.user.username}`);

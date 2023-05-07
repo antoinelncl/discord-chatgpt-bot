@@ -3,6 +3,7 @@ import { BitFieldResolvable, ClientOptions, GatewayIntentBits, GatewayIntentsStr
 const intentOptions: BitFieldResolvable<GatewayIntentsString, number> = [
   GatewayIntentBits.Guilds,
   GatewayIntentBits.GuildMessages,
+  GatewayIntentBits.MessageContent,
   GatewayIntentBits.GuildMembers,
   GatewayIntentBits.GuildEmojisAndStickers,
   GatewayIntentBits.GuildMessageReactions,

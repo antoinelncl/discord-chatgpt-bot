@@ -1,4 +1,4 @@
-import { ApplicationCommandOptionType, CacheType, CommandInteraction, SlashCommandBuilder } from 'discord.js';
+import { CacheType, CommandInteraction, SlashCommandBuilder } from 'discord.js';
 
 export interface Command {
   data: SlashCommandBuilder;
@@ -8,26 +8,21 @@ export interface Command {
 export interface CommandSettings {
   name: string;
   description: string;
-  options?: CommandOptions[];
-  subCommands?: SubCommands[];
+  options?: Record<string, CommandOption>;
+  subCommands?: Record<string, SubCommand>;
   isDmCommand: boolean;
   defaultMemberPermission?: bigint;
   errorContext: string;
 }
 
-export type CommandOptions = {
-  type: ApplicationCommandOptionType;
-  settings: CommandOptionsSettings;
-};
-
-export type CommandOptionsSettings = {
+export type CommandOption = {
   name: string;
   description: string;
   required: boolean;
 };
 
-export type SubCommands = {
+export type SubCommand = {
   name: string;
   description: string;
-  options?: CommandOptions[];
+  options?: Record<string, CommandOption>;
 };

@@ -18,6 +18,9 @@ export const reloadSlashCommandsHandler = async (commandsData: RESTPostAPIChatIn
 
     logHelper.debug(JSON.stringify(data));
     logHelper.info(`Successfully reloaded ${commandsData.length} application (/) commands.`);
+    commandsData.forEach((commandData) => {
+      logHelper.debug(commandData.name);
+    });
   } catch (err) {
     errorHelper(ErrorContext.ReloadCommandsHandler, err);
   }
