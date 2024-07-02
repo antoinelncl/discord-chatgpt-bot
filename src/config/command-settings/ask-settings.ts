@@ -4,14 +4,14 @@ import { CommandOption, CommandSettings } from '~/types/command';
 const askOptions: Record<string, CommandOption> = {
   prompt: {
     name: 'prompt',
-    description: 'The prompt or question you want to ask Eustache.',
+    description: 'The prompt or question you want to ask bot.',
     required: true,
   },
 };
 
 export const askSettings: CommandSettings = {
   name: 'ask',
-  description: 'Ask anything to Eustache and he will answer. You can then discuss with him in thread.',
+  description: 'Ask anything to bot and he will answer. You can then discuss with him in thread.',
   defaultMemberPermission: PermissionFlagsBits.Administrator,
   options: askOptions,
   isDmCommand: false,

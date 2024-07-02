@@ -17,8 +17,8 @@ export class EnvVarHelper {
     try {
       if (!sentryDsn) throw new Error('Sentry DSN environement variable missing.');
       if (!discordToken) throw new DiscordjsError(DiscordjsErrorCodes.TokenMissing);
-      if (!discordApplicationId) throw new Error('Application id of Eustache missing.');
-      if (!openAiToken) throw new Error('OpenAi token of Eustache missing.');
+      if (!discordApplicationId) throw new Error('Application id of bot missing.');
+      if (!openAiToken) throw new Error('OpenAi token of bot missing.');
     } catch (error) {
       errorHelper('envHelper', error);
       process.exit(1);

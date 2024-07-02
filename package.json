@@ -1,5 +1,5 @@
 {
-  "name": "eustache",
+  "name": "discord-chatgpt-bot",
   "version": "0.0.1",
   "description": "Just a fun discord bot to use with my friends",
   "main": "main.js",

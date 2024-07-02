@@ -4,7 +4,7 @@ import { errorHelper } from '~/helpers/error-helper';
 import { Command } from '~/types/command';
 
 export const ping: Command = {
-  data: new SlashCommandBuilder().setName('ping').setDescription('get eustache current ping').setDMPermission(true),
+  data: new SlashCommandBuilder().setName('ping').setDescription('get bot current ping').setDMPermission(true),
   run: async (interaction): Promise<void> => {
     if (!interaction.isChatInputCommand()) return;
     try {
